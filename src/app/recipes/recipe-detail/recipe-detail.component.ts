@@ -14,12 +14,12 @@ export class RecipeDetailComponent implements OnInit {
 
   constructor(private recipeService: RecipeService, private activatedRoute: ActivatedRoute) {}
 
-  //
+  // kai uzkrauna iskart daro si coda
   ngOnInit() {
     this.activatedRoute.params
     .subscribe (
       (params: Params) => {
-        this.id = +params.id; // gauni id is routerio  kur :id
+        this.id = +params.id; // gauni id is routerio  kur :id //0,1
          // gaunu pati individualu recepta pagal id is recipe service, ji priskiriu this.recipe
         this.recipe = this.recipeService.getRecipe(this.id);
       }
