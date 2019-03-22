@@ -13,4 +13,18 @@ export class AuthService {
         }
       );
   }
+
+  signinUser(email: string, password: string) {
+    firebase.auth().signInWithEmailAndPassword(email, password)
+    .then(
+      response => {
+        console.log(response);
+      }
+    )
+    .catch(
+      response => {
+        console.log(response);
+      }
+    );
+  }
 }
